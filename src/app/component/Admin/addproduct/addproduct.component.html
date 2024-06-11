@@ -1,0 +1,72 @@
+<form #createForm="ngForm" (ngSubmit)="onCreate(createForm.value)">
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Tên dự án </label>
+            <input type="text" class="form-control" #errName="ngModel" placeholder="Text.."  name="tenduan" ngModel  required  minlength="3" maxlength="10">
+            <p *ngIf=" errName.dirty && errName.invalid" class="text-danger" >dữ liệu nhập chưa hợp lệ! vui lòng kiểm tra lại</p>
+            <p *ngIf="errName.dirty && errName.errors?.['required'] " class="text-danger">tên không được bỏ trống</p>
+            <p *ngIf="errName.dirty && errName.errors?.['minlength']" class="text-danger">tên không được ngắn hơn 3</p>
+       
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Tên người quản lý </label>
+            <input type="text" class="form-control" #errql="ngModel" placeholder="Text.." name="tenquanly" ngModel required ="1000">
+            <p *ngIf=" errql.dirty && errql.invalid" class="text-danger" >dữ liệu nhập chưa hợp lệ! vui lòng kiểm tra lại</p>
+            <p *ngIf="errql.dirty && errql.errors?.['required'] " class="text-danger">tên không được bỏ trống</p>
+            <p *ngIf="errql.dirty && errql.errors?.['minlength']" class="text-danger">tên không được ngắn hơn 3</p>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Số lượng thành viên </label>
+            <input type="number" class="form-control" #sl="ngModel" placeholder="Nhập số lượng thành viên tại đây" name="slthanhvien"
+                ngModel required min="0">
+                <p *ngIf=" sl.dirty && sl.invalid" class="text-danger" >dữ liệu nhập chưa hợp lệ! vui lòng kiểm tra lại</p>
+                <p *ngIf="sl.dirty && sl.errors?.['required'] " class="text-danger">0 được bỏ trống</p>
+                <p *ngIf="sl.dirty && sl.errors?.['minlength']" class="text-danger"> không được ngắn hơn 3</p>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Ngày bắt đầu dự án </label>
+            <input type="date" class="form-control" placeholder="Text.." name="datestart" ngModel>
+         
+        </div>
+
+    </div>
+    
+
+   
+
+    <div class="form-group">
+        <label for="inputAddress">Image</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="img" name="image" ngModel>
+    </div>
+
+    <div class="form-group">
+        <label for="inputAddress2">Số điện thoại người đại diện</label>
+        <input type="number" class="form-control" id="inputAddress2"  name="phone" ngModel>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputZip">Chi phí cho dự án</label>
+            <input type="text" class="form-control" id="inputZip" name="tongchi" ngModel>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Hiện tại đã chi</label>
+            <input type="text" class="form-control" id="inputZip" name="dachi" ngModel>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Số dư còn lại</label>
+            <input type="text" class="form-control" id="inputZip" name="conlai" ngModel>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Check me out
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm mới dự án</button>
+</form>

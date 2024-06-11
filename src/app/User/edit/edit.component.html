@@ -1,0 +1,23 @@
+<p>edit works!</p>
+<form #editForm="ngForm" (ngSubmit)=" onEdit(editForm.value)">
+    <div class="form-row">
+        <div>
+            <label for="">name</label>
+            <input type="text" class="form-control" name="username" [(ngModel)]="project.username">
+        </div>
+
+        <div>
+            <label for="">email</label>
+            <input type="email" class="form-control" name="email"  [(ngModel)]="project.email">
+        </div>
+
+    
+        <div>
+            <label for="">image</label>
+            <input type="text" class="form-control" name="image" [(ngModel)]="project.image">
+        </div>
+        <button  type="submit" class="btn btn-success form-control" >Edit</button>
+
+    </div>
+
+</form>

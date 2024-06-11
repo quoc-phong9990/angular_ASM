@@ -1,0 +1,56 @@
+<form #createForm="ngForm" (ngSubmit)="onCreate(createForm.value)">
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Tên nhiệm vụ</label>
+            <input type="text" class="form-control" placeholder="Text.." name="taskname" ngModel>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Mô tả </label>
+            <input type="text" class="form-control" placeholder="Text.." name="dipcription" ngModel>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Dự án </label>
+            <input type="text" class="form-control" placeholder="Nhập tên dự án " name="project"
+                ngModel>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Phân công </label>
+            <input type="text" class="form-control" placeholder="Text.." name="assigned" ngModel>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Ưu tiên </label>
+            <input type="text" class="form-control" placeholder="Text.." name="priority" ngModel>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Trạng thái </label> <br>
+          <select class="form-control"  name="status" ngModel> 
+            <option value="hoàn thành">hoàn thành </option>
+            <option value=" chưa hoàn thành">chưa hoàn thành</option>
+            <option value=" thất bại">thất bại </option>
+          </select>
+        </div>
+         
+    </div>
+
+   
+
+    <div class="form-group">
+        <label for="inputAddress">Image</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="img" name="image" ngModel>
+    </div>
+
+
+
+
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Check me out
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm mới task</button>
+</form>

@@ -1,0 +1,22 @@
+<form #addForm="ngForm" (ngSubmit)=" onAdd(addForm.value)">
+    <div class="form-row">
+        <div>
+            <label for="">name</label>
+            <input type="text" class="form-control" name="username" ngModel>
+        </div>
+
+        <div>
+            <label for="">email</label>
+            <input type="email" class="form-control" name="email" ngModel>
+        </div>
+
+    
+        <div>
+            <label for="">image</label>
+            <input type="text" class="form-control" name="image" ngModel>
+        </div>
+        <button  type="submit" class="btn btn-success form-control" >Add </button>
+
+    </div>
+
+</form>

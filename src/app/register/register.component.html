@@ -1,0 +1,12 @@
+
+<form action="" class="table" #registerForm="ngForm" (ngSubmit)=" onSubmitregister(registerForm.value)">
+    <div>
+        <label for="">email</label>
+        <input class="form-control" type="email" placeholder="email1" name="email" ngModel>
+
+        <label for="">password</label>
+        <input class="form-control" type="password" placeholder="password" name="password" ngModel>
+
+        <button type="submit"  class="btn btn-primary">Đăng Ký</button>
+    </div>
+</form>
